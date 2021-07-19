@@ -7,30 +7,30 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+  StatusBar,
+  Image,
+} from 'react-native';
+
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={styles.root}>
         <View
-          style={{
-            alignContent: 'center',
-            alignSelf: 'center',
-            marginHorizontal: 16,
-          }}>
-          <Text style={{fontSize: 24, fontWeight: '800', alignSelf: 'center'}}>
+          style={styles.container}>
+          <Text style={styles.title}>
             Camera Permission Needed
           </Text>
           <Text
-            style={{
-              fontSize: 18,
-              fontWeight: '600',
-              alignSelf: 'center',
-              marginTop: 16,
-            }}>
-            This app needs access to your camera. If you don't comfortable with this permission, you can go to settings and modify it at any time.
+            style={styles.description}>
+            This app needs access to your camera. If you don't comfortable with
+            this permission, you can go to settings and modify it at any time.
           </Text>
         </View>
       </SafeAreaView>
@@ -39,7 +39,25 @@ const App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
- 
+  root: {backgroundColor: '#52734D', flex: 1},
+  container: {
+    alignContent: 'center',
+    alignSelf: 'center',
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '800',
+    alignSelf: 'center',
+    color: '#FEFFDE',
+  },
+  description: {
+    fontSize: 18,
+    fontWeight: '600',
+    alignSelf: 'center',
+    marginTop: 16,
+    color: '#FEFFDE',
+  }
 });
 
 export default App;
