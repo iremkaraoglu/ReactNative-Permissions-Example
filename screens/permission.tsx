@@ -9,12 +9,17 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {request, PERMISSIONS} from 'react-native-permissions';
 
-request(PERMISSIONS.IOS.LOCATION_ALWAYS).then((result) => {
-  // …
-  console.log(result)
-});
+
 
 export default function PermissionScreen() {
+    const [permissionResult, setPermissionResult] = React.useState("Not asked for permission")
+
+    request(PERMISSIONS.IOS.CAMERA).then((result) => {
+      // …
+      setPermissionResult(result)
+      console.log(result)
+    });
+
     return(
         <>
         <StatusBar barStyle="dark-content" />
@@ -29,7 +34,14 @@ export default function PermissionScreen() {
               This app needs access to your camera. If you don't comfortable with
               this permission, you can go to settings and modify it at any time.
             </Text>
-            <TouchableOpacity style={{height:50, width: 70, backgroundColor: "white"}} onPress={() => request}/>
+            <TouchableOpacity style={{backgroundColor: '#DDFFBC', borderRadius: 32, justifyContent: "center", marginTop: 48, alignSelf: "center"}} onPress={() => request}>
+              <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#1C281A", margin: 16}}>
+                Ask for permission
+              </Text>
+            </TouchableOpacity>
+            <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#DDFFBC", margin: 16}}>
+               Permission Result: {permissionResult}
+              </Text>
           </View>
         </SafeAreaView>
       </>
