@@ -4,8 +4,9 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '10.0'
 
 target 'ReactNativePermissionsExample' do
+  permissions_path = '../node_modules/react-native-permissions/ios'
   config = use_native_modules!
-
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   use_react_native!(:path => config["reactNativePath"])
 
   target 'ReactNativePermissionsExampleTests' do

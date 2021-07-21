@@ -4,8 +4,15 @@ import {
   View,
   Text,
   StatusBar,
+  TouchableOpacity
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import {request, PERMISSIONS} from 'react-native-permissions';
+
+request(PERMISSIONS.IOS.LOCATION_ALWAYS).then((result) => {
+  // …
+  console.log(result)
+});
 
 export default function PermissionScreen() {
     return(
@@ -22,6 +29,7 @@ export default function PermissionScreen() {
               This app needs access to your camera. If you don't comfortable with
               this permission, you can go to settings and modify it at any time.
             </Text>
+            <TouchableOpacity style={{height:50, width: 70, backgroundColor: "white"}} onPress={() => request}/>
           </View>
         </SafeAreaView>
       </>
