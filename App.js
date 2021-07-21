@@ -7,57 +7,31 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  Image,
-} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Permission from './screens/permission';
 
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.root}>
-        <View
-          style={styles.container}>
-          <Text style={styles.title}>
-            Camera Permission Needed
-          </Text>
-          <Text
-            style={styles.description}>
-            This app needs access to your camera. If you don't comfortable with
-            this permission, you can go to settings and modify it at any time.
-          </Text>
-        </View>
-      </SafeAreaView>
-    </>
-  );
+const App = () => {
+  return <MyStack />;
 };
 
-const styles = StyleSheet.create({
-  root: {backgroundColor: '#52734D', flex: 1},
-  container: {
-    alignContent: 'center',
-    alignSelf: 'center',
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: '800',
-    alignSelf: 'center',
-    color: '#FEFFDE',
-  },
-  description: {
-    fontSize: 18,
-    fontWeight: '600',
-    alignSelf: 'center',
-    marginTop: 16,
-    color: '#FEFFDE',
-  }
-});
+const Stack = createStackNavigator();
 
+const MyStack = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+      }}>
+        <Stack.Screen
+          name="Permission"
+          component={Permission}
+          options={{title: ''}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 export default App;
