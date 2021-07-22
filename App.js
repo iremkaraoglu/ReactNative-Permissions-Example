@@ -9,6 +9,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import PermissionList from './screens/permissionList';
 import CameraPermission from './screens/camPermission';
 import MicrophonePermission from './screens/micPermission';
 
@@ -26,6 +27,11 @@ const MyStack = () => {
         screenOptions={{
           headerShown: false,
       }}>
+        <Stack.Screen
+          name="PermissionList"
+          component={PermissionList}
+          options={{title: ''}}
+        />
         <Stack.Screen
           name="CameraPermission"
           component={CameraPermission}

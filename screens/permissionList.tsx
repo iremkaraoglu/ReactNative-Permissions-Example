@@ -7,19 +7,10 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {request, PERMISSIONS} from 'react-native-permissions';
 
 
 
-export default function MicrophonePermissionScreen() {
-    const [permissionResult, setPermissionResult] = React.useState("Not asked for permission")
-
-    request(PERMISSIONS.IOS.MICROPHONE).then((result) => {
-      // …
-      setPermissionResult(result)
-      console.log(result)
-    });
-
+export default function PermissionsList({navigation}) {
     return(
         <>
         <StatusBar barStyle="dark-content" />
@@ -27,21 +18,18 @@ export default function MicrophonePermissionScreen() {
           <View
             style={styles.container}>
             <Text style={styles.title}>
-              Microphone Permission Needed
+              Permission List
             </Text>
-            <Text
-              style={styles.description}>
-              This app needs access to your microphone. If you don't comfortable with
-              this permission, you can go to settings and modify it at any time.
-            </Text>
-            <TouchableOpacity style={{backgroundColor: '#DDFFBC', borderRadius: 32, justifyContent: "center", marginTop: 48, alignSelf: "center"}} onPress={() => request}>
-              <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#1C281A", margin: 16}}>
-                Ask for permission
+            <TouchableOpacity style={{ justifyContent: "center", marginTop: 48, alignSelf: "center"}} onPress={() => navigation.navigate("CameraPermission")}>
+              <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#DDFFBC", margin: 16}}>
+                Camera
               </Text>
             </TouchableOpacity>
+            <TouchableOpacity style={{justifyContent: "center", marginTop: 48, alignSelf: "center"}} onPress={() => navigation.navigate("MicrophonePermission")}>
             <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#DDFFBC", margin: 16}}>
-               Permission Result: {permissionResult}
+                Microphone
               </Text>
+            </TouchableOpacity>
           </View>
         </SafeAreaView>
       </>
