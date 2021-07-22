@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-  	<key>NSCameraUsageDescription</key>
-  	<string>CameraPermission</string>
 	<key>CFBundleDisplayName</key>
 	<string>ReactNativePermissionsExample</string>
 	<key>CFBundleExecutable</key>
@@ -39,6 +37,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>CameraPermission</string>
+	<key>NSMicrophoneUsageDescription</key>
+  	<string>MicrophonePermission</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
@@ -50,8 +52,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>

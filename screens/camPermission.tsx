@@ -11,7 +11,7 @@ import {request, PERMISSIONS} from 'react-native-permissions';
 
 
 
-export default function PermissionScreen() {
+export default function CameraPermissionScreen() {
     const [permissionResult, setPermissionResult] = React.useState("Not asked for permission")
 
     request(PERMISSIONS.IOS.CAMERA).then((result) => {
