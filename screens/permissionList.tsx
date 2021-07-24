@@ -20,23 +20,23 @@ export default function PermissionsList({navigation}) {
             <Text style={styles.title}>
               Permission List
             </Text>
-            <TouchableOpacity style={{ justifyContent: "center", marginTop: 48, alignSelf: "center"}} onPress={() => navigation.navigate("CameraPermission")}>
-              <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#DDFFBC", margin: 16}}>
-                Camera
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent: "center", marginTop: 48, alignSelf: "center"}} onPress={() => navigation.navigate("MicrophonePermission")}>
-            <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#DDFFBC", margin: 16}}>
-                Microphone
-              </Text>
-            </TouchableOpacity>
+            <TouchableOpacity style={{backgroundColor: '#7F4A88', borderRadius: 32, justifyContent: "center", marginTop: 24, alignSelf: "center"}} onPress={() => navigation.navigate("CameraPermission")}>
+            <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#FFD9E8", margin: 16}}>
+              Camera
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{backgroundColor: '#7F4A88', borderRadius: 32, justifyContent: "center", marginTop: 24, alignSelf: "center"}} onPress={() => navigation.navigate("MicrophonePermission")}>
+            <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#FFD9E8", margin: 16}}>
+              Microphone
+            </Text>
+          </TouchableOpacity>
           </View>
         </SafeAreaView>
       </>
     );
 }
 const styles = StyleSheet.create({
-    root: {backgroundColor: '#52734D', flex: 1},
+    root: {backgroundColor: '#4A266A', flex: 1},
     container: {
       alignContent: 'center',
       alignSelf: 'center',
@@ -47,13 +47,6 @@ const styles = StyleSheet.create({
       fontSize: 24,
       fontWeight: '800',
       alignSelf: 'center',
-      color: '#FEFFDE',
+      color: '#FFD9E8',
     },
-    description: {
-      fontSize: 21,
-      fontWeight: '600',
-      alignSelf: 'center',
-      marginTop: 32,
-      color: '#FEFFDE',
-    }
   });
