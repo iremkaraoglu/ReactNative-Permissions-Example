@@ -7,6 +7,7 @@ target 'ReactNativePermissionsExample' do
   config = use_native_modules!
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
+  pod 'Permission-AppTrackingTransparency', :path => "#{permissions_path}/AppTrackingTransparency"
   use_react_native!(:path => config["reactNativePath"])
 
   target 'ReactNativePermissionsExampleTests' do
