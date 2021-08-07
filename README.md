@@ -1,63 +1,40 @@
-# :space_invader: React Native Template TypeScript
-
+<h1 align="center">Welcome to React Native Permissions Example 👋</h1>
 <p>
-  <a href="https://travis-ci.org/react-native-community/react-native-template-typescript">
-    <img alt="Build Status" src="https://img.shields.io/travis/react-native-community/react-native-template-typescript.svg" target="_blank" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="iremkaraoglu.medium.com" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  <a href="https://twitter.com/basroldemuzik" target="_blank">
+    <img alt="Twitter: basroldemuzik" src="https://img.shields.io/twitter/follow/basroldemuzik.svg?style=social" />
   </a>
 </p>
 
-> Clean and minimalist React Native template for a quick start with TypeScript.
+> This project is created as an example of a react-native-permissions library usage.
 
-## :star: Features
-
-- Elegant usage directly within the [React Native CLI](https://github.com/react-native-community/cli)
-- Consistent with the default React Native template
-- Minimal additional dependencies
-
-## :arrow_forward: Usage
+## Install
 
 ```sh
-npx react-native init MyApp --template react-native-template-typescript
+yarn install
 ```
 
-### Usage with older versions of React Native
-
-#### e.g. `react-native@0.63.x`
+## Usage
 
 ```sh
-npx react-native init MyApp --template react-native-template-typescript@6.5.*
+yarn run start
 ```
 
-See the below table to find out which version of the template to use.
+To run the app on a device, [check it out.](https://reactnative.dev/docs/running-on-device)
+## Author
 
-#### React Native <=> Template Version
+👤 **İrem Karaoğlu**
 
-| React Native  	| Template  	|
-|---	            |---	        |
-| 0.64  	        | 6.6.*       |
-| 0.63  	        | 6.5.*       |
-| 0.62  	        | 6.4.*       |
-| 0.61  	        | 6.3.*       |
-| 0.60  	        | 6.2.*       |
+* Website: iremkaraoglu.medium.com
+* Github: [@iremkaraoglu](https://github.com/iremkaraoglu)
+* LinkedIn: [iremkaraoglu](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/iremkaraoglu)
 
-### Note on the legacy CLI
-There seems to be quite some confusion about the legacy CLI. This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`), for the below command to work. If you wish to not use `npx`, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
+## Show your support
 
-Further information can be found here: https://github.com/react-native-community/cli#about
+Give a ⭐️ if this project helped you!
 
-## :computer: Contributing
-
-Contributions are very welcome. Please check out the [contributing document](CONTRIBUTING.md).
-
-## :bookmark: License
-
-This project is [MIT](LICENSE) licensed.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
