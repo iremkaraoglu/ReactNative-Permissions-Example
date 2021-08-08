@@ -41,8 +41,6 @@
 	<string>CameraPermission</string>
 	<key>NSMicrophoneUsageDescription</key>
   	<string>MicrophonePermission</string>
-	<key>NSUserTrackingUsageDescription</key>
-  	<string>ATTPermission</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>

@@ -30,16 +30,6 @@ export default function PermissionsList({navigation}) {
               Microphone
             </Text>
           </TouchableOpacity>
-          <View>
-          <TouchableOpacity style={{backgroundColor: '#7F4A88', borderRadius: 32, marginTop: 24, alignSelf: "center", margin:16}} onPress={() => navigation.navigate("ATTPermission")}>
-            <Text style={{justifyContent: "center", alignSelf: "center", alignContent: "center", fontSize: 18, fontWeight: "600", color: "#FFD9E8", margin: 16}}>
-              App Tracking Transparency 
-            </Text>
-          </TouchableOpacity>
-          <Text style={{fontSize: 18, fontWeight: "600", color: "#FFD9E8", alignSelf: "center",margin:-8}}>
-          (ATT is only valid for iOS 14.5 or newer)
-            </Text>
-            </View>
           </View>
         </SafeAreaView>
       </>
