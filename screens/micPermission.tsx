@@ -15,10 +15,14 @@ import {request, PERMISSIONS} from 'react-native-permissions';
 export default function MicrophonePermissionScreen() {
     const [permissionResult, setPermissionResult] = React.useState("Not asked for permission")
 
-    request(Platform.OS === 'ios' ? PERMISSIONS.IOS.MICROPHONE : PERMISSIONS.ANDROID.RECORD_AUDIO).then((result) => {
-      setPermissionResult(result)
-      console.log(result)
-    });
+    React.useEffect(() => {
+      request(Platform.OS === 'ios' ? PERMISSIONS.IOS.MICROPHONE : PERMISSIONS.ANDROID.RECORD_AUDIO).then((result) => {
+        setPermissionResult(result)
+        console.log(result)
+      });
+    }, []);
+
+    
 
     return(
       <>

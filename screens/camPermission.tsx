@@ -13,10 +13,12 @@ import {request, PERMISSIONS} from 'react-native-permissions';
 export default function CameraPermissionScreen() {
     const [permissionResult, setPermissionResult] = React.useState("Not asked for permission")
 
+    React.useEffect(() => {
       request(Platform.OS === 'ios' ? PERMISSIONS.IOS.CAMERA : PERMISSIONS.ANDROID.CAMERA).then((result) => {
         setPermissionResult(result)
         console.log(result)
       });
+    }, []);
     
 
     return(
