@@ -28,7 +28,8 @@ To run the app on a device, [check it out.](https://reactnative.dev/docs/running
 
 👤 **İrem Karaoğlu**
 
-* Website: iremkaraoglu.medium.com
+* Website: [iremkaraoglu.medium.com](https://iremkaraoglu.medium.com)
+
 * Github: [@iremkaraoglu](https://github.com/iremkaraoglu)
 * LinkedIn: [iremkaraoglu](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/iremkaraoglu)
 
