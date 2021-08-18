@@ -11,6 +11,9 @@
 
 > This project is created as an example of a react-native-permissions library usage.
 
+
+<img src="./demo.gif" width="25%" height="25%"/>
+
 ## Install
 
 ```sh
