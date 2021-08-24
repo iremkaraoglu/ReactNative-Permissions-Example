@@ -9,7 +9,8 @@
   </a>
 </p>
 
-> This project is created as an example of a react-native-permissions library usage.
+> This project is created as an example of a react-native-permissions library usage. To learn more, check it out my blog post: [Managing app permissions in React Native](https://blog.logrocket.com/react-native-permissions/)
+
 
 
 <img src="./demo.gif" width="25%" height="25%"/>
