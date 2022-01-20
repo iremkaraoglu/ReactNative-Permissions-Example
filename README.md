@@ -4,8 +4,8 @@
   <a href="iremkaraoglu.medium.com" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://twitter.com/basroldemuzik" target="_blank">
-    <img alt="Twitter: basroldemuzik" src="https://img.shields.io/twitter/follow/basroldemuzik.svg?style=social" />
+  <a href="https://twitter.com/iremkaraoglu_" target="_blank">
+    <img alt="Twitter: iremkaraoglu_" src="https://img.shields.io/twitter/follow/iremkaraoglu_.svg?style=social" />
   </a>
 </p>
 
