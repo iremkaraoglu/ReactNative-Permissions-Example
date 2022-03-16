@@ -12,7 +12,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import PermissionList from './screens/permissionList';
 import CameraPermission from './screens/camPermission';
 import MicrophonePermission from './screens/micPermission';
-
+import ContactsPermissionScreen from './screens/contactsPermission';
+import CalendarPermissionScreen from './screens/calendarPermission';
 
 const App = () => {
   return <MyStack />;
@@ -26,7 +27,7 @@ const MyStack = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-      }}>
+        }}>
         <Stack.Screen
           name="PermissionList"
           component={PermissionList}
@@ -40,6 +41,16 @@ const MyStack = () => {
         <Stack.Screen
           name="MicrophonePermission"
           component={MicrophonePermission}
+          options={{title: ''}}
+        />
+        <Stack.Screen
+          name="CalendarPermission"
+          component={CalendarPermissionScreen}
+          options={{title: ''}}
+        />
+        <Stack.Screen
+          name="ContactsPermission"
+          component={ContactsPermissionScreen}
           options={{title: ''}}
         />
       </Stack.Navigator>
