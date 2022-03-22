@@ -7,12 +7,14 @@ target 'ReactNativePermissionsExample' do
   config = use_native_modules!
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
+  pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
+  pod 'Permission-Calendars', :path => "#{permissions_path}/Calendars"
+  pod 'Permission-FaceID', :path => "#{permissions_path}/FaceID"
+  pod 'Permission-Reminders', :path => "#{permissions_path}/Reminders"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'ReactNativePermissionsExampleTests' do
-    inherit! :complete
-    # Pods for testing
-  end
 
   # Enables Flipper.
   #
@@ -32,11 +34,4 @@ target 'ReactNativePermissionsExample' do
   end
 end
 
-target 'ReactNativePermissionsExample-tvOS' do
-  # Pods for ReactNativePermissionsExample-tvOS
 
-  target 'ReactNativePermissionsExample-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end

@@ -11,15 +11,13 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {request, PERMISSIONS} from 'react-native-permissions';
 
 export default function CalendarPermissionScreen() {
-  const [permissionResult, setPermissionResult] = React.useState(
-    'Not asked for permission',
-  );
+  const [permissionResult, setPermissionResult] = React.useState('Not asked');
 
   React.useEffect(() => {
     request(
       Platform.OS === 'ios'
         ? PERMISSIONS.IOS.CALENDARS
-        : PERMISSIONS.ANDROID.READ_CALENDAR,
+        : PERMISSIONS.ANDROID.WRITE_CALENDAR,
     ).then((result) => {
       setPermissionResult(result);
       console.log(result);

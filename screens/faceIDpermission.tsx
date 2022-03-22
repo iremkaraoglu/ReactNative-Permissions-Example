@@ -4,21 +4,17 @@ import {
   View,
   Text,
   StatusBar,
-  ScrollView,
   Platform,
+  ScrollView,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {request, PERMISSIONS} from 'react-native-permissions';
 
-export default function MicrophonePermissionScreen() {
+export default function FaceIDPermissionScreen() {
   const [permissionResult, setPermissionResult] = React.useState('Not asked');
 
   React.useEffect(() => {
-    request(
-      Platform.OS === 'ios'
-        ? PERMISSIONS.IOS.MICROPHONE
-        : PERMISSIONS.ANDROID.RECORD_AUDIO,
-    ).then((result) => {
+    request(PERMISSIONS.IOS.FACE_ID).then((result) => {
       setPermissionResult(result);
       console.log(result);
     });
@@ -29,9 +25,9 @@ export default function MicrophonePermissionScreen() {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.root}>
         <ScrollView style={styles.container}>
-          <Text style={styles.title}>Microphone Permission Needed</Text>
+          <Text style={styles.title}>Face ID Permission Needed</Text>
           <Text style={styles.description}>
-            This app needs access to your microphone. If you are not comfortable
+            This app needs access to your face ID. If you are not comfortable
             with this permission, you can go to settings and modify it at any
             time.
           </Text>

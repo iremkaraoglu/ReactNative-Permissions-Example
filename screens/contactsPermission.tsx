@@ -11,15 +11,13 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {request, PERMISSIONS} from 'react-native-permissions';
 
 export default function ContactsPermissionScreen() {
-  const [permissionResult, setPermissionResult] = React.useState(
-    'Not asked for permission',
-  );
+  const [permissionResult, setPermissionResult] = React.useState('Not asked');
 
   React.useEffect(() => {
     request(
       Platform.OS === 'ios'
         ? PERMISSIONS.IOS.CONTACTS
-        : PERMISSIONS.ANDROID.READ_CONTACTS,
+        : PERMISSIONS.ANDROID.WRITE_CONTACTS,
     ).then((result) => {
       setPermissionResult(result);
       console.log(result);

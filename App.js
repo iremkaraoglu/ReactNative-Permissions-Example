@@ -14,6 +14,11 @@ import CameraPermission from './screens/camPermission';
 import MicrophonePermission from './screens/micPermission';
 import ContactsPermissionScreen from './screens/contactsPermission';
 import CalendarPermissionScreen from './screens/calendarPermission';
+import SendSMSPermissionScreen from './screens/sendSMS';
+import {Platform} from 'react-native';
+import FaceIDPermissionScreen from './screens/faceIDpermission';
+import ReminderPermissionScreen from './screens/remindersPermission';
+import PhotoLibraryPermissionScreen from './screens/photosPermission';
 
 const App = () => {
   return <MyStack />;
@@ -53,6 +58,33 @@ const MyStack = () => {
           component={ContactsPermissionScreen}
           options={{title: ''}}
         />
+
+        {Platform.OS === 'android' && (
+          <Stack.Screen
+            name="SendSMSPermission"
+            component={SendSMSPermissionScreen}
+            options={{title: ''}}
+          />
+        )}
+        {Platform.OS === 'ios' && (
+          <>
+            <Stack.Screen
+              name="FaceIDPermission"
+              component={FaceIDPermissionScreen}
+              options={{title: ''}}
+            />
+            <Stack.Screen
+              name="ReminderPermission"
+              component={ReminderPermissionScreen}
+              options={{title: ''}}
+            />
+            <Stack.Screen
+              name="PhotosPermission"
+              component={PhotoLibraryPermissionScreen}
+              options={{title: ''}}
+            />
+          </>
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   );

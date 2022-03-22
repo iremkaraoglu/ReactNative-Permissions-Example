@@ -5,6 +5,7 @@ import {
   Text,
   StatusBar,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
@@ -35,6 +36,32 @@ export default function PermissionsList({navigation}) {
             onPress={() => navigation.navigate('CalendarPermission')}>
             <Text style={styles.buttonText}>Calendar</Text>
           </TouchableOpacity>
+          {Platform.OS === 'android' && (
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('SendSMSPermission')}>
+              <Text style={styles.buttonText}>Messages</Text>
+            </TouchableOpacity>
+          )}
+          {Platform.OS === 'ios' && (
+            <>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('FaceIDPermission')}>
+                <Text style={styles.buttonText}>Face ID</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('ReminderPermission')}>
+                <Text style={styles.buttonText}>Reminders</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('PhotosPermission')}>
+                <Text style={styles.buttonText}>Photos Library</Text>
+              </TouchableOpacity>
+            </>
+          )}
         </View>
       </SafeAreaView>
     </>
@@ -46,7 +73,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignSelf: 'center',
     marginHorizontal: 16,
-    marginTop: 156,
+    marginTop: 32,
   },
   title: {
     fontSize: 24,
@@ -60,6 +87,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 24,
     alignSelf: 'center',
+    width: 160,
   },
   buttonText: {
     justifyContent: 'center',
